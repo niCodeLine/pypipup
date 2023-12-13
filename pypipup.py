@@ -1,4 +1,3 @@
-
 import subprocess
 
 def update_pips():
@@ -30,6 +29,10 @@ def update_pips():
                 print('All packages updated successfully!')
             else:
                 print(f'The following packages could not be updated:\n\n{content}')
+        print('> Cleaning caché...')
+        import os
+        os.remove('outdated_pips.txt')
+        print('Ready! Enjoy your updated features.')
     except Exception as e:
         print(f'Failed to update packages. Error:\n\n{e}')
 
