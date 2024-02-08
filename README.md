@@ -19,7 +19,7 @@ python -m pypipup
 ```
 or for Python 3:
 ```bash
-python -m pypipup
+python3 -m pypipup
 ```
 
 ## Features
