@@ -9,7 +9,12 @@ You can easily install `pypipup` using pip:
 ```bash
 pip install pypipup
 ```
+or via git:
 
+```bash
+git clone https://github.com/niCodeLine/pypipup.git
+```
+or just copy-paste it in your code.
 ## Usage
 
 To use pypipup open a terminal or command prompt and run the script:
