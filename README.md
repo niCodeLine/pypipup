@@ -14,7 +14,7 @@ or via git:
 ```bash
 git clone https://github.com/niCodeLine/pypipup.git
 ```
-or just copy-paste it in your code.
+or just copy-paste it into your code.
 ## Usage
 
 To use pypipup open a terminal or command prompt and run the script:
