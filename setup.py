@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='pypipup',
-    version='1.2',
+    version='1.2.2',
     packages=find_packages(),
     description='Package that identifies and updates outdated pip packages.',
     long_description=open('README.md').read(),
