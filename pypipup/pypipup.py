@@ -7,14 +7,14 @@ def update_pips():
         print('Pip updated!')
 
         print('> Checking for outdated packages...')
-        subprocess.call('pip3 list -o > outdated_pips.txt', shell=True)
+        subprocess.call('pip3 freeze -o > outdated_pips.txt', shell=True)
 
         out_pips_file = 'outdated_pips.txt'
         print('- Updating packages...')
         with open(out_pips_file, 'r') as f:
             lines = f.readlines()
             for index, line in enumerate(lines):
-                package_name = line.strip().split(' ')[0]
+                package_name = line.strip().split('==')[0]
                 if index > 1:
                     print(f'> Updating {package_name}...')
                     subprocess.call(f'pip3 install {package_name} --upgrade', shell=True)
