@@ -9,7 +9,8 @@ You can easily install `pypipup` using pip:
 ```bash
 pip install pypipup
 ```
-**via *pip* might be outdated**
+**via *pip* might be outdated**  
+
 or via git:
 
 ```bash
