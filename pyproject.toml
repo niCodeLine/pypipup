@@ -1,0 +1,42 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "pypipup"
+version = "2.0.0"
+description = "Review and update outdated packages in the active Python environment."
+readme = "README.md"
+license = { file = "LICENSE" }
+authors = [{ name = "Nico Spok" }]
+requires-python = ">=3.9"
+keywords = ["pip", "packages", "update", "cli"]
+classifiers = [
+  "Environment :: Console",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+]
+
+[project.scripts]
+pypipup = "pypipup.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/niCodeLine/pypipup"
+Issues = "https://github.com/niCodeLine/pypipup/issues"
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "pytest-cov>=5", "ruff>=0.9"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/pypipup"]
+
+[tool.pytest.ini_options]
+addopts = "--cov=pypipup --cov-report=term-missing"
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 88
+target-version = "py39"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM"]
